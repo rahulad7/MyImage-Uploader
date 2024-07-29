@@ -24,13 +24,13 @@ export default function ProfileCard() {
 
   useEffect(() => {
     if (status) {
-      const timer = setTimeout(() => setStatus(""), 5000);
+      const timer = setTimeout(() => setStatus(""), 500000);
       return () => clearTimeout(timer);
     }
   }, [status]);
 
   return (
-    <div className="w-full h-screen flex flex-col items-center justify-center">
+    <div className="w-full h-screen flex flex-col gap-24 items-center justify-center">
       {/* Status Bar */}
       {status && (
         <div

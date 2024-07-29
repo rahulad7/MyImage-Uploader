@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Dropzone, { DropEvent, FileRejection } from "react-dropzone";
 import CancelButton from "../assets/cancel-button.svg";
-import UploadThumbnail from "../assets/upload-thumbnail.svg";
+import UploadThumbnail from '../assets/upload-thumbnail.svg';
 import Cropper from "react-easy-crop";
 import { getCroppedImg } from "../utlis/cropImage";
 import { uploadImage } from "../firebaseConfig";
@@ -9,7 +9,7 @@ import { uploadImage } from "../firebaseConfig";
 interface ImageUploaderPopupProps {
   onClose: () => void;
   onUploadComplete: (url: string) => void;
-  onUploadError: () => void; // Added for error handling
+  onUploadError: () => void; 
 }
 
 const ImageUploaderPopup: React.FC<ImageUploaderPopupProps> = ({
@@ -68,7 +68,7 @@ const ImageUploaderPopup: React.FC<ImageUploaderPopupProps> = ({
       console.error("Crop failed:", error);
       setStatusMessage("Crop failed. Please try again.");
       setStatusType("error");
-      onUploadError(); // Call error handler
+      onUploadError(); 
     }
   };
 
@@ -84,7 +84,7 @@ const ImageUploaderPopup: React.FC<ImageUploaderPopupProps> = ({
         "Upload failed. Please retry or contact us if you believe this is a bug"
       );
       setStatusType("error");
-      onUploadError(); // Call error handler
+      onUploadError(); 
     }
   };
 
