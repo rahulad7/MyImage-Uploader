@@ -24,7 +24,7 @@ export default function ProfileCard() {
 
   useEffect(() => {
     if (status) {
-      const timer = setTimeout(() => setStatus(""), 500000);
+      const timer = setTimeout(() => setStatus(""), 5000);
       return () => clearTimeout(timer);
     }
   }, [status]);
